@@ -1194,7 +1194,7 @@ describe("Core/GeometryPipeline", function () {
             ]),
           }),
         },
-        indices: new Uint16Array([0, 1, 2, 3, 4, 5]),
+        indices: new Uint8Array([0, 1, 2, 3, 4, 5]),
         primitiveType: PrimitiveType.TRIANGLES,
       })
     );

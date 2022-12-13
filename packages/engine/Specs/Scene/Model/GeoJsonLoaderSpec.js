@@ -122,9 +122,9 @@ describe(
 
         if (primitive.primitiveType === PrimitiveType.LINES) {
           expect(indices.buffer).toBeDefined();
-          expect(indices.buffer.sizeInBytes).toBe(expected.indexCount * 2);
+          expect(indices.buffer.sizeInBytes).toBe(expected.indexCount);
           expect(indices.count).toBe(expected.indexCount);
-          expect(indices.indexDatatype).toBe(IndexDatatype.UNSIGNED_SHORT);
+          expect(indices.indexDatatype).toBe(IndexDatatype.UNSIGNED_BYTE);
         }
 
         expect(material.unlit).toBe(true);

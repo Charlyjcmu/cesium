@@ -11,8 +11,12 @@ describe("Core/IndexDatatype", function () {
 
   it("createTypedArray creates array", function () {
     expect(IndexDatatype.createTypedArray(3, 3).BYTES_PER_ELEMENT).toEqual(
-      Uint16Array.BYTES_PER_ELEMENT
+      Uint8Array.BYTES_PER_ELEMENT
     );
+    expect(
+      IndexDatatype.createTypedArray(CesiumMath.TWO_FIFTY_SIX_BYTES + 1, 3)
+        .BYTES_PER_ELEMENT
+    ).toEqual(Uint16Array.BYTES_PER_ELEMENT);
     expect(
       IndexDatatype.createTypedArray(CesiumMath.SIXTY_FOUR_KILOBYTES + 1, 3)
         .BYTES_PER_ELEMENT

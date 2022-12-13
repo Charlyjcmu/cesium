@@ -109,12 +109,12 @@ IndexDatatype.validate = function (indexDatatype) {
 };
 
 /**
- * Creates a typed array that will store indices, using either <code><Uint16Array</code>
- * or <code>Uint32Array</code> depending on the number of vertices.
+ * Creates a typed array that will store indices, using either <code><Uint8Array</code>
+ * or <code><Uint16Array</code> or <code>Uint32Array</code> depending on the number of vertices.
  *
  * @param {Number} numberOfVertices Number of vertices that the indices will reference.
  * @param {Number|Array} indicesLengthOrArray Passed through to the typed array constructor.
- * @returns {Uint16Array|Uint32Array} A <code>Uint16Array</code> or <code>Uint32Array</code> constructed with <code>indicesLengthOrArray</code>.
+ * @returns {Uint8Array|Uint16Array|Uint32Array} A <code>Uint8Array</code> or <code>Uint16Array</code> or <code>Uint32Array</code> constructed with <code>indicesLengthOrArray</code>.
  *
  * @example
  * this.indices = Cesium.IndexDatatype.createTypedArray(positions.length / 3, numberOfIndices);
@@ -132,10 +132,7 @@ IndexDatatype.createTypedArray = function (
   if (numberOfVertices >= CesiumMath.SIXTY_FOUR_KILOBYTES) {
     return new Uint32Array(indicesLengthOrArray);
   }
-
-  //return new Uint16Array(indicesLengthOrArray);
-
-  if (numberOfVertices >= CesiumMath.THIRTY_TWO_KILOBYTES) {
+  if (numberOfVertices >= CesiumMath.TWO_FIFTY_SIX_BYTES) {
     return new Uint16Array(indicesLengthOrArray);
   }
 
