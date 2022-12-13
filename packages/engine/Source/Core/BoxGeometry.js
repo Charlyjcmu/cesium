@@ -711,7 +711,7 @@ BoxGeometry.createGeometry = function (boxGeometry) {
     }
 
     // 12 triangles:  6 faces, 2 triangles each.
-    indices = new Uint16Array(6 * 2 * 3);
+    indices = new Uint8Array(6 * 2 * 3);
 
     // +z face
     indices[0] = 0;
