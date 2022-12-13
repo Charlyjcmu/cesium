@@ -342,3 +342,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for details on how to contribute to Cesiu
 - [Calogero Mauceri](https://github.com/calogeromauceri)
 - [Marcel Wendler](https://github.com/UniquePanda)
 - [JiaoJianing](https://github.com/JiaoJianing)
+- [Charly Jin](https://github.com/Charlyjcmu)
+- [Rahul Ravula](https://github.com/rravula77)
+- [Hikma Redi](https://github.com/hredi)
+- [Meghashyam Krishnasamy](https://github.com/megkrish7)

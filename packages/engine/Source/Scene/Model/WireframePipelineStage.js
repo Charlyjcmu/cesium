@@ -86,10 +86,10 @@ function createWireframeIndexBuffer(primitive, indices, frameState) {
     const indicesBuffer = indices.buffer;
     const indicesCount = indices.count;
     if (defined(indicesBuffer) && webgl2) {
-      const useUint8Array = indicesBuffer.sizeInBytes === indicesCount;
-      originalIndices = useUint8Array
-        ? new Uint8Array(indicesCount)
-        : IndexDatatype.createTypedArray(vertexCount, indicesCount);
+      originalIndices = IndexDatatype.createTypedArray(
+        vertexCount,
+        indicesCount
+      );
 
       indicesBuffer.getBufferData(originalIndices);
     } else {
